@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  h2=message
+  table(class="table table-hover")
+    thead
+      tr
+        th Page URL
+        th # of Views
+    each page in pages
+      tr
+        td=page._id
+        td=page.count
+  a(href='/contacts') Back to Contacts
