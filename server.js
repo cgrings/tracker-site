@@ -12,7 +12,7 @@ app.use("/", home);
 app.use("/contacts", contacts);
 
 // Connect mongo database
-const mongodb_uri = process.env.MONGOLAB_URI || 'mongodb://localhost/test';
+const mongodb_uri = process.env.MONGODB_URI || 'mongodb://localhost/test';
 mongoose.connect(mongodb_uri, function (error) {
   if (error) console.error(error);
   else console.log('MongoDB connected.');
