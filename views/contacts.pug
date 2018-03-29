@@ -13,5 +13,5 @@ block content
         td=contact.name
         td=contact.email
         td
-          a(href=`contacts/${contact.tracker}/pages`) Visited Pages
+          a(href=`contacts/${encodeURIComponent(contact.email)}/pages`) Visited Pages
   a(href='/') Back to Home

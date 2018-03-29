@@ -9,10 +9,13 @@ var pageViewSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tracker: {
+  session: {
     type: String,
     required: true
   },
+  user: {
+    type: String
+  }
 });
 
 module.exports = mongoose.model('pageView', pageViewSchema);

@@ -18,10 +18,10 @@ router.get('/', function (req, res) {
   });
 })
 
-router.get('/:tracker/pages', function (req, res) {
-  var tracker = req.params.tracker;
+router.get('/:user/pages', function (req, res) {
+  var user = req.params.user;
   PageView.aggregate([
-    {$match:{"tracker":tracker}},
+    {$match:{"user":user}},
     {$group:{"_id":"$url","count":{$sum:1}}}
   ],
   function(err, pages) {

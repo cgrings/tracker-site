@@ -14,10 +14,6 @@ var contactSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  tracker: {
-    type: String,
-    required: true
-  },
 });
 
 module.exports = mongoose.model('Contact', contactSchema);
